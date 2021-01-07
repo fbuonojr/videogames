@@ -23,6 +23,9 @@ $(document).ready(function() {
         $.ajax(settings).done(function (response) {
             console.log(response)
             var gameTitle = $("#gameTitle");
+            var name = response.name;
+            var titleH = $("<h1>").text(name);
+            gameTitle.append(titleH);
         });
     });
 })
