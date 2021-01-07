@@ -21,6 +21,7 @@ $(document).ready(function() {
         }
 
         $.ajax(settings).done(function (response) {
+            $("#gameTitle").empty();
             console.log(response)
             var gameTitle = $("#gameTitle");
             var name = response.name;
