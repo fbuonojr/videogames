@@ -39,6 +39,7 @@ $(document).ready(function() {
             var image = response.background_image;
             var imageTag = $("<img>");
             imageTag.attr("src", image);
+            imageTag.attr("style", "height:1000px; width:1000px;");
             gameSection.append(imageTag);
 
             //get esrb rating from ajax response and append it to section
