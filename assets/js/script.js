@@ -20,13 +20,14 @@ $(document).ready(function() {
             }
         }
 
+
+        var gameSection = $("#gameSection");
         $.ajax(settings).done(function (response) {
-            $("#gameTitle").empty();
+            gameSection.empty();
             console.log(response)
-            var gameTitle = $("#gameTitle");
             var name = response.name;
             var titleH = $("<h1>").text(name);
-            gameTitle.append(titleH);
+            gameSection.append(titleH);
         });
     });
 })
