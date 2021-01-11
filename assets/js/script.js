@@ -1,7 +1,9 @@
 $(document).ready(function() {
+    //click event when search button is clicked
     $("#find-game").on("click", function(event) {
         event.preventDefault();
 
+        //take input from search bar and format it to fit the queryURL
         var game = $("#game-input").val();
         var dashedGame = game.replace(/ /g, "-");
         console.log(dashedGame);
