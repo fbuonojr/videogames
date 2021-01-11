@@ -32,6 +32,12 @@ $(document).ready(function() {
             var name = response.name;
             var titleH = $("<h1>").text(name);
             gameSection.append(titleH);
+
+            //get background image from ajax response and append it to section
+            var image = response.background_image;
+            var imageTag = $("<img>");
+            imageTag.attr("src", image);
+            gameSection.append(imageTag);
         });
     });
 })
