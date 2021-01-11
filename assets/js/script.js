@@ -38,6 +38,11 @@ $(document).ready(function() {
             var imageTag = $("<img>");
             imageTag.attr("src", image);
             gameSection.append(imageTag);
+
+            //get esrb rating from ajax response and append it to section
+            var rating = response.esrb_rating.name;
+            var ratingH = $("<h4>").text("Rated: " + rating);
+            gameSection.append(ratingH);
         });
     });
 })
