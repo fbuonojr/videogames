@@ -23,8 +23,12 @@ $(document).ready(function() {
 
         var gameSection = $("#gameSection");
         $.ajax(settings).done(function (response) {
+            console.log(response);
+            
+            //empty section for new game results
             gameSection.empty();
-            console.log(response)
+            
+            //get name from ajax response and append it to section
             var name = response.name;
             var titleH = $("<h1>").text(name);
             gameSection.append(titleH);
