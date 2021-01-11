@@ -43,6 +43,11 @@ $(document).ready(function() {
             var rating = response.esrb_rating.name;
             var ratingH = $("<h4>").text("Rated: " + rating);
             gameSection.append(ratingH);
+
+            //get metacritic score from ajax response and append it to section
+            var mScore = response.metacritic;
+            var scoreH = $("<h4>").text("Metacritic Score: " + mScore);
+            gameSection.append(scoreH);
         });
     });
 })
