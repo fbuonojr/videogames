@@ -48,6 +48,11 @@ $(document).ready(function() {
             var mScore = response.metacritic;
             var scoreH = $("<h4>").text("Metacritic Score: " + mScore);
             gameSection.append(scoreH);
+
+            //get description from ajax response and append it to section
+            var description = response.description;
+            var descriptionEl = $("<p>").html(description);
+            gameSection.append(descriptionEl);
         });
     });
 })
