@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //click event when search button is clicked
-    $("#find-game").on("click", function(event) {
+    $("#find-game").on("click", function (event) {
         event.preventDefault();
 
         //take input from search bar and format it to fit the queryURL
@@ -26,10 +26,10 @@ $(document).ready(function() {
         var gameSection = $("#gameSection");
         $.ajax(settings).done(function (response) {
             console.log(response);
-            
+
             //empty section for new game results
             gameSection.empty();
-            
+
             //get name from ajax response and append it to section
             var name = response.name;
             var titleH = $("<h1>").text(name);
@@ -59,7 +59,22 @@ $(document).ready(function() {
         });
     });
 
-    var modal = $(".modal");
-    var trigger = $(".trigger");
-    var closeButton = $(".close-button");
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+
 })
