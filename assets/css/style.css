@@ -8,7 +8,7 @@
     opacity: 0;
     visibility: hidden;
     transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform;
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modal-content {
@@ -31,11 +31,12 @@
     border-radius: 0.25rem;
     background-color: lightgray;
 }
-.close-button:hover{
+
+.close-button:hover {
     background-color: darkgray;
 }
 
-.show-modal{
+.show-modal {
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
