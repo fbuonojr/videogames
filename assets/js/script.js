@@ -58,4 +58,8 @@ $(document).ready(function() {
             gameSection.append(descriptionEl);
         });
     });
+
+    var modal = $(".modal");
+    var trigger = $(".trigger");
+    var closeButton = $(".close-button");
 })
